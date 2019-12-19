@@ -70,6 +70,7 @@
         </section>
         <!-- END section -->
 
+        
         <section class="ftco-section" id="section-intro">
             <div class="container">
                 <div class="row">
@@ -370,10 +371,10 @@
                     <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100"> 
                         <h1>Diversity or older copies?</h1>
                     </div>
-                    <div class="col-md-4 col-lg-4 mb-3" data-aos="fade-right" data-aos-delay="100" style="margin-top: 0%">
+                    <div class="col-md-4 col-lg-4 mb-5" data-aos="fade-right" data-aos-delay="100" style="margin-top: 0%">
                             <IMG SRC="images/gif2.gif" align="right" width="100%" height="100%"></IMG>
                     </div>
-                    <div class="col-md-8 col-lg-8  mb-3" data-aos="fade-up" data-aos-delay="100" style="margin-top: 1.8%">
+                    <div class="col-md-8 col-lg-8  mb-5" data-aos="fade-up" data-aos-delay="100" style="margin-top: 1.8%">
                         <p>We can actually see two different tendencies for the two comics publishers. Overall, the number of used categories each year for DC is globally the same, whereas Marvel continuously increases it. We can indeed see that they sometimes have hundreds of different categories for attributes like citizenship, education or even eyes color.</p>
                         <p>Thus, even though the top categories were the same over years, increasing the total number of categories has probably created diversity. Indeed, if the number of categories for one year is higher than the previous one, they are most likely to be new ones. On the other hand, even if DC has kept a constant number of used categories, we can<span style="font-family: fantasy">'</span>t for sure say that they aren<span style="font-family: fantasy">'</span>t new ones, but we can just suppose that it might create less diversity in their characters compared to Marvel.</p>
                     </div>
@@ -400,11 +401,81 @@
         <section class="ftco-section" id="popularity-about">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12  mb-5" data-aos="fade-up">
-                        <h3>Gros point</h3>
-                        <p>Blabla.</p>
+                    <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">
+                        <p>Sometimes, if you choose to analyze the hole data as it is, you might miss interesting phenomena. We tried to split our portrait analysis according to the behavior attribute, which means that we study the characteristics for good, bad and neutral characters.</p>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
+                        <h1>Different roles, different portraits</h1>
+                        <p>The following histogram displays the most represented characteristics for the previously studied attributes, with the proportion of good, bad and neutral characters. Let<span style="font-family: fantasy" >'</span>s see if they are all represented in the same way, and don't forget to hover over the graph to have the exact proportions.</p>
+                    </div>
+                </div>
+                <div class="row">
+                   <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">                            
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/375.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">
+                        <p>Some attributes show a clear separation depending on the character<span style="font-family: fantasy" >'</span>s behavior, which means that some characteristics are more likely to be attributed to a good than a bad character (or the contrary). Let<span style="font-family: fantasy" >'</span>s for example see the education attribute. For most of the categories, the proportion of bad characters is lower than 25%. This is actually a good thing since an image is conveyed here: superheroes have generally pursued education. Take the example of <a href="https://marvel.fandom.com/wiki/Anthony_Stark_(Earth-616)" target="_blank" style="color: #990000" onmouseover="this.style.background='';this.style.color='#FF0000';" onmouseout="this.style.background='';this.style.color='#990000';">Iron-man</a>: he went to MIT and have multiple PhDs. If young readers see him as a hero, they can be inspired and try to pursue an engineering career for example. Of course, this can also have a negative impact for people who couldn<span style="font-family: fantasy" >'</span>t, for some reason, access to high level of education or even to college, who would see a correlation between being good and having a high education.</p>
+                        <p>And what if some more random correlations exist between a behavior and an attribute? Try to look at the hair color distribution. It seems that for both Marvel and DC, approximately half of bald people are villains. Calm down, this is probably not a conspiracy theory with a hidden message from the comics creators. It could however create some unintentional connections in the readers mind. This can actually help the writers to more easily show the evilness of a character, but it can also reduce the diversity of good characters and define two different portraits depending on the behavior.</p>
+                        <p>As we did previously, let<span style="font-family: fantasy" >'</span>s add time evolution to our plots and see what happens.</p>
+                    </div>
+                </div>
+                <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="300"> 
+                        <div id="goodbadplot">                            
+                            <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/24.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                       </div>
+
+                        <button id="btnmar" onclick="showmar1()">Marital status</button>
+                        <button id="btngen" onclick="showgen1()">Gender</button>
+                        <button id="btncit" onclick="showcit1()">Citizenship</button>
+                        <button id="btnbeh" onclick="showbir1()">Place of birth</button>
+                        <button id="btnocc" onclick="showocc1()">Occupation</button>
+                        <button id="btnedu" onclick="showedu1()">Education</button>
+                        <button id="btneye" onclick="showeye1()">Eyes</button>
+                        <button id="btnhair" onclick="showhair1()">Hair</button>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100"> 
+                       <p>If we look at the evolution of characters citizenships over time, we can see that some periods can be recognized. This is especially the case for the world wars periods which also correspond to the first Marvel and DC comic books: almost all Japanese, Italian and German characters were villains. So the separation becomes more and more clear: superheroes come from America to fight the evilness of Germany and Japan. In times of war, soft power had an impact on citizens, and the US have always tried to convey an image of strength and superiority over the enemies. This phenomenon was observed in many movies, and it is logical to also find it in comic books. However, this portrait didn<span style="font-family: fantasy" >'</span>t really disappear. We can see even years after the wars were over that German characters were still mostly associated to bad characters, which as said before, can sometimes lead the reader to have some unconscious thoughts about German people.</p>
+                       <p>It is clear that all these conclusions must be said cautiously. Sometimes the proportion of good or bad characters is high, but the total number of characters with this category is relatively low. If we look at the evolution of genderfluid characters, we see that they are generally villains. However, the number of genderfluid characters is so small compared to the other genders that we can<span style="font-family: fantasy" >'</span>t really jump into any conclusion.</p>   
+                   </div>
+                </div>
+               <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">                            
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~Ahko26/71.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                    </div>
+               </div> 
+               <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">                          
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/302.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                    </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">                             
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/43.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                    </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100"> 
+                        <div id="popplot">                            
+                            <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/52.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                       </div>
+
+                        <button id="btnmar" onclick="showmar2()">Marital status</button>
+                        <button id="btngen" onclick="showgen2()">Gender</button>
+                        <button id="btncit" onclick="showcit2()">Citizenship</button>
+                        <button id="btnbeh" onclick="showbir2()">Place of birth</button>
+                        <button id="btnocc" onclick="showocc2()">Occupation</button>
+                        <button id="btnedu" onclick="showedu2()">Education</button>
+                        <button id="btneye" onclick="showeye2()">Eyes</button>
+                        <button id="btnhair" onclick="showhair2()">Hair</button>
+                   </div>
+               </div>
             </div>
         </section>
         <!-- END section -->       
@@ -436,12 +507,33 @@
                     <div class="col-md-12  mb-2" data-aos="fade-up" data-aos-delay="100">
                         <h1 class="ftco-heading heading-thin">Gender imbalance.<span style="font-size: 5px"> </span>.<span style="font-size: 5px"> </span>.</h1>
                         <p>Looking at the editors gender distribution down below, we see that for both Marvel and DC comics, there were almost 100% male editors until the 80<span style="font-size: 10px">s</span>. You can hover over the graph to see the exact number of publications and its corresponding proportion.</p>
-                        <p>But starting from that period, we observe that more women became editors-in-chief. This is a direct consequence of the 70<span style="font-size: 10px">s</span>, a period of time when women started to massively go to colleges and graduate schools in the US (known as women<span style="font-family: fantasy">'</span>s quiet revolution). However, two tendencies are to distinguish between the two comics publishers. DC saw its number of publications edited by women be more and more consistent especially after the 90<span style="font-size: 10px">s</span>. It even reached the point where it exceeded the proportion of male editors. Whereas for Marvel, apart from very few years, mostly men edited the comics.</p>
+                        <p>But starting from that period, we observe that more women became editors-in-chief. This is a direct consequence of the 70<span style="font-size: 10px">s</span>, a period of time when women started to massively go to colleges and graduate schools in the US (known as women<span style="font-family: fantasy">'</span>s quiet revolution). However, two tendencies are to distinguish between the two comics publishers. DC saw its number of publications edited by women be more and more consistent especially after the 90<span style="font-size: 10px">s</span>. It even reached the point where it exceeded the proportion of male editors. Whereas for Marvel, apart from very few years, 100% of the editors were men.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/423.embed?showlink=false" height="525" width="100%"></iframe>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12  mb-2" data-aos="fade-up" data-aos-delay="100">
-                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/423.embed?showlink=false" height="525" width="100%"></iframe>
+                        <p>Let<span style="font-family: fantasy" >'</span>s have a closer look at the periods of activity. Generally, an editor-in-chief stays at least for a few months, and many of them occupied their post for many years. Thus there are relatively a few number of editors. The two following timelines will help us understand the previous results. Please note that the displayed names don<span style="font-family: fantasy">'</span>t constitute the hole list of editors, otherwise it wouldn<span style="font-family: fantasy">'</span>t be convenient to read. You can however see the hole data, and if you hover on the periods of activity, you<span style="font-family: fantasy">'</span>ll see the corresponding editor name. You can moreover double click on one category to display it on its own. Finally, if an editor<span style="font-family: fantasy">'</span>s gender is specified as "unknown", it means that it wasn<span style="font-family: fantasy">'</span>t specified in the data.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-0" data-aos="fade-up" data-aos-delay="100">
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/464.embed?showlink=false" height="525" width="100%"></iframe>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-2" data-aos="fade-up" data-aos-delay="0">
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/468.embed?showlink=false" height="525" width="100%"></iframe>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">
+                        <p>These timelines give us interesting results. We can see that female editors for Marvel never stayed more than 3 years, which compared to men that have a much longer activity period, explains why there are less comics edited by women. On the opposite, some DC female editors had the opportunity to stay as editors-in-chief for more than 8 years, like <a href="https://dc.fandom.com/wiki/Karen_Berger" target="_blank" style="color: #0f4c81" onmouseover="this.style.background='';this.style.color='blue';" onmouseout="this.style.background='';this.style.color='#0f4c81';">Karen Berger</a> (20 years!). Putting this in parallel with the previous graphs, it can explain why DC had a higher proportion of comics edited by women.</p>
+                        <p>Still, the number of editors is limited. So before relating this to the comics characters, let<span style="font-family: fantasy">'</span>s see what the writers have to say.</p>
                     </div>
                 </div>
                 <div class="row">
@@ -453,9 +545,8 @@
                     <div class="col-md-4 col-lg-4 mb-3" data-aos="fade-right" data-aos-delay="100" style="margin-top: 0%">
                         <IMG SRC="images/gif6.gif" align="right" width="100%" height="100%"></IMG>
                     </div>
-                    <div class="col-md-8 col-lg-8  mb-3" data-aos="fade-up" data-aos-delay="100" style="margin-top: 1.2%">
-                        <p>Nevertheless, if we have a closer look at the results, we can see that the number of editors-in-chief is quite low. Indeed, there<span style="font-family: fantasy" >'</span>s generally only one editor-in-chief, and further, he has this position for a few years at least.</p>
-                        <p>It is on the other hand different for writers, there are many of them at the same time, even for one comic book. This means more data to look at, and more data means more categories! So let<span style="font-family: fantasy">'</span>s see what we<span style="font-family: fantasy">'</span>ve got.</p>
+                    <div class="col-md-8 col-lg-8  mb-3" data-aos="fade-up" data-aos-delay="100" style="margin-top: 2%">
+                        <p>So actually, the number of editors-in-chief is relatively low as we saw in the previous timelines. It is on the other hand different for writers, there are much more of them than editors. Even for one comic book there can be multiple writers. This means more data to look at, and more data means more categories! So let<span style="font-family: fantasy">'</span>s see what we<span style="font-family: fantasy">'</span>ve got.</p>
                     </div>
                 </div>
                 <div class="row">
@@ -465,112 +556,14 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12  mb-2" data-aos="fade-up" data-aos-delay="100">
-                        <p>The writers gender distribution is much more diverse than the editors one. Apart from a higher proportion of women writers than editors, we can even see the emergence of other genders than male or female like ???. This can be put in parallel with the comics characters genders. Indeed, the genders diversity for the writers might have influenced the gender of the characters they create: more female writers can lead to more female characters. The same principle can also be extended for gender minorities.</p>
-                        <p>Of course, one can not easily say that writers will create characters based on their own characteristics, but the influence can still be felt. It might also take time to see minorities have a higher proportion, like it happened for women.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12  mb-2" data-aos="fade-up" data-aos-delay="100">
-                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/464.embed?showlink=false" height="525" width="100%"></iframe>
-                    </div>
-                    <div class="col-md-12  mb-2" data-aos="fade-up" data-aos-delay="100">
-                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/468.embed?showlink=false" height="525" width="100%"></iframe>
+                        <p>Well, good news and bad news. As always, bad news first. The observed problem is that even if the percentage of women writers isn<span style="font-family: fantasy">'</span>t always 0% (comparing Marvel female editors and writers for example), the proportion is still low compared to men. Indeed, the highest observed percentage for both Marvel and DC is barely 8.5%, and we can<span style="font-family: fantasy">'</span>t even see the tendency increasing over years. This unbalance can affect the creative process that leads to the choice of the portrait for comics characters. Of course, one can not say with certainty that writers will create characters based on their own characteristics, but the influence can still be felt: there are more male characters and more male writers and editors than female, and the two variables are likely to be correlated.</p>
+                        <p>The good news is that the Marvel writers gender distribution is more diverse than the editors one. We can actually see the emergence of other genders than male or female like non-binary, especially in the very recent years (you can double click on the category to see it with more details). This can also be put in parallel with the comics characters genders. Indeed, these writers that are part of gender minorities can try to create diversity for the characters. This may also be related to the recent emergence of new genders that we observed in the very beginning of this analysis. However, it might take time to see these other genders take a bigger part in the comics characters, and a start could be to have writers and editors with more diverse genders.</p>
                     </div>
                 </div>
             </div>
         </section>
         <!-- END section --> 
 
-
-        <div class="ftco-section">
-            <div class="container">
-                <div class="row justify-content-center mb-5 pb-5">
-                    <div class="col-md-7 text-center" data-aos="fade-up">
-                        <h2>Testimonials</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4"  data-aos="fade-up">
-                        <div class="flip-container">
-                            <div class="flipper">
-                                <div class="front" style="background-image: url(../images/image_5.jpg);">
-                                    <div class="box">
-                                        <h2>Mellissa Clark</h2>
-                                        <p>Web Designer</p>
-                                    </div>
-                                </div>
-                                <div class="back">
-                                    <!-- back content -->
-                                    <blockquote>
-                                        <p>&ldquo;A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.&rdquo;</p>
-                                    </blockquote>
-                                    <div class="author d-flex">
-                                        <div class="image mr-3 align-self-center">
-                                            <img src="images/person_1.jpg" alt="">
-                                        </div>
-                                        <div class="name align-self-center">Mellisa Clark <span class="position">Web Designer</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> <!-- .flip-container -->
-                    </div>
-                    <div class="col-md-6 col-lg-4"  data-aos="fade-up" data-aos-delay="100">
-
-                        <div class="flip-container hover">
-                            <div class="flipper">
-                                <div class="front" style="background-image: url(../images/image_6.jpg);">
-                                    <div class="box">
-                                        <h2>Mellissa Clark</h2>
-                                        <p>Web Designer</p>
-                                    </div>
-                                </div>
-                                <div class="back">
-                                    <!-- back content -->
-                                    <blockquote>
-                                        <p>&ldquo;Far far away, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-                                    </blockquote>
-                                    <div class="author d-flex">
-                                        <div class="image mr-3 align-self-center">
-                                            <img src="images/person_2.jpg" alt="">
-                                        </div>
-                                        <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> <!-- .flip-container -->
-
-                    </div>
-                    <div class="col-md-6 col-lg-4"  data-aos="fade-up" data-aos-delay="200">
-
-                        <div class="flip-container">
-                            <div class="flipper">
-                                <div class="front" style="background-image: url(../images/image_7.jpg);">
-                                    <div class="box">
-                                        <h2>Aldin Powell</h2>
-                                        <p>Web Developer</p>
-                                    </div>
-                                </div>
-                                <div class="back">
-                                    <!-- back content -->
-                                    <blockquote>
-                                        <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&rdquo;</p>
-                                    </blockquote>
-                                    <div class="author d-flex">
-                                        <div class="image mr-3 align-self-center">
-                                            <img src="images/person_3.jpg" alt="">
-                                        </div>
-                                        <div class="name align-self-center">Aldin Powell <span class="position">Web Developer</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> <!-- .flip-container -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
 
         <div class="ftco-section bg-light">
             <div class="container">
@@ -766,6 +759,7 @@
             })
         </script>
 
+        
         <script>
         function showmar() {
           document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/311.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
@@ -826,6 +820,106 @@
         }
         </script>
         
+        
+        
+        <script>
+        function showmar1() {
+          document.getElementById("goodbadplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/24/.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showgen1() {
+          document.getElementById("goodbadplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/5.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showcit1() {
+          document.getElementById("goodbadplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/28.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showbir1() {
+          document.getElementById("goodbadplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/30.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showocc1() {
+          document.getElementById("goodbadplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/2.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showedu1() {
+          document.getElementById("goodbadplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/26.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showeye1() {
+          document.getElementById("goodbadplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/9.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showhair1() {
+          document.getElementById("goodbadplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/7.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        
+        
+        <script>
+        function showmar2() {
+          document.getElementById("popplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/52/.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showgen2() {
+          document.getElementById("popplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/54.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showcit2() {
+          document.getElementById("popplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/60.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showbir2() {
+          document.getElementById("popplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/50.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showocc2() {
+          document.getElementById("popplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/46.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showedu2() {
+          document.getElementById("popplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/48.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showeye2() {
+          document.getElementById("popplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/56.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showhair2() {
+          document.getElementById("popplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/58.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script> 
+    
         
         <script src="js/main.js"></script>
 
