@@ -143,8 +143,11 @@ sup {
 
 @font-face{
     font-family: "Komika Hand";
-    src: url('../fonts/Komika-Hand/Komika_Hand.ttf')
-
+    src: url(‘../fonts/Komika-Hand/Komika_Hand.ttf’) format(ttf),
+     url(‘../fonts/Komika-Hand/KomikaHand.eot’) format(eot),
+     url(‘../fonts/Komika-Hand/KomikaHand.svg’) format(svg),
+     url(‘../fonts/Komika-Hand/KomikaHand.woff’) format(woff),
+     url(‘../fonts/Komika-Hand/KomikaHand.woff2’) format(woff2);
 }
 
 a {
