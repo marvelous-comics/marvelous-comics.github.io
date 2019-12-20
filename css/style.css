@@ -43,7 +43,7 @@
   box-sizing: border-box; }
 
 html {
-  font-family: sans-serif;
+  font-family: "Komika Hand";
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -58,7 +58,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: handika;
+  font-family: "Komika Hand";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -142,7 +142,7 @@ sup {
   top: -.5em; }
 
 @font-face{
-    font-family: handika;
+    font-family: "Komika Hand";
     src: url('../fonts/Komika-Hand/Komika_Hand.ttf')
 
 }
@@ -169,7 +169,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: "Komika Hand", "Komika Hand";
   font-size: 1em; }
 
 pre {
@@ -429,7 +429,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: handika; }
+  font-family: "Komika Hand"; }
 
 code {
   font-size: 87.5%;
@@ -4502,7 +4502,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: handika;
+  font-family: "Komika Hand";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4587,7 +4587,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: handika;
+  font-family: "Komika Hand";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7061,7 +7061,7 @@ button.bg-dark:focus {
     margin-left: auto !important; } }
 
 .text-monospace {
-  font-family: handika; }
+  font-family: "Komika Hand"; }
 
 .text-justify {
   text-align: justify !important; }
@@ -7265,7 +7265,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 }
 body {
-  font-family: handika;
+  font-family: "Komika Hand";
   background: #fff;
   font-size: 16px;
   line-height: 1.8;
@@ -7431,7 +7431,7 @@ h1, h2, h3, h4, h5,
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.7);
     font-weight: 300;
-    font-family: handika; 
+    font-family: "Komika Hand"; 
 }
   @media (max-width: 991.98px) {
     .ftco-cover .btn {
@@ -7614,7 +7614,7 @@ textarea.form-control {
   text-transform: uppercase;
   letter-spacing: .5em;
   color: #d4d4d4;
-  font-family: handika;
+  font-family: "Komika Hand";
   font-weight: 300; }
 
 .ftco-section .ftco-primary-title {
