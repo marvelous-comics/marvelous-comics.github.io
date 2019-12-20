@@ -446,14 +446,26 @@
                    </div>
                 </div>
                <div class="row">
-                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">                            
-                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~Ahko26/71.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
-                    </div>
-               </div> 
+                   <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100"> 
+                       <p>When we say Marvel and DC, people tend to only think about the <a href="https://marvel.fandom.com/wiki/Avengers_(Earth-616)" target="_blank" style="color: #990000" onmouseover="this.style.background='';this.style.color='#FF0000';" onmouseout="this.style.background='';this.style.color='#990000';">Avengers</a> or <a href="https://dc.fandom.com/wiki/Batman_(Bruce_Wayne)" target="_blank" style="color: #0f4c81" onmouseover="this.style.background='';this.style.color='blue';" onmouseout="this.style.background='';this.style.color='#0f4c81';">Batman</a>, but we said in the very beginning that there were more than 50 000 characters in total! So what happens to the less famous ones?</p>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">  
+                       <h1>To be (famous) or not to be</h1>
+                       <p>Saying that a comic character is famous or not might greatly depend on who is to answer the question. To avoid any subjectivity in our analysis, we tried to formulate a mathematical way to compute a "famousness score" (oh no maths!). Please don<span style="font-family: fantasy" >'</span>t be scared, we won<span style="font-family: fantasy" >'</span>t get into details here. For the most interested you can check the notebook in the bottom of the page were everything is explained. For the others, let<span style="font-family: fantasy" >'</span>s just say that this score is an arithmetic mean based on the longevity (time between first and last appearance) and the number of appearances of a character. This way, if a character appeared a few times but over a long period, he would get a low appearance score. And on the contrary, if a character appeared many times but on a short period of time, we would have a low longevity score. Since the famousness is based on both scores, a famous character has to appear a high number of times and over a long period.</p>
+                       <p>We decided to split the famousness into three equally divided categories: forgotten (0 &lt; famousness &lt; 33), intermediate (33 &lt; famousness &lt; 66) and famous (66 &lt; famousness &lt; 100). The following histogram shows in what categories the different characters are.</p>
+                   </div>
+               </div>
                <div class="row">
                    <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">                          
                         <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/302.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
                     </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">
+                       <p>First thing to notice is the that the number of characters decreases with the famousness score, which means that many characters are forgotten and a few are famous. Moreover, this plot is in logarithmic scale so the difference between famousness categories is actually bigger than visualised on the graph: only 3% of the Marvel and DC characters are considered as famous with our score. In other words, the reason that you remember only a few characters is because Marvel and DC made things that way.</p>
+                   </div>
                </div>
                <div class="row">
                    <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">                             
@@ -476,6 +488,11 @@
                         <button id="btnhair" onclick="showhair2()">Hair</button>
                    </div>
                </div>
+               <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">                            
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~Ahko26/71.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                    </div>
+               </div> 
             </div>
         </section>
         <!-- END section -->       
